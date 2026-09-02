@@ -452,7 +452,8 @@ header .custom-button:last-child {
   box-shadow: 0px 0px 1 rgba(255, 244, 220) inset;
   transform: rotate(2deg);
 }
-.host-wrapper {
+.host-wrapper,
+.reciept-wrapper {
   padding: 24px;
   height: 100%;
   display: flex;
@@ -492,8 +493,33 @@ header .custom-button:last-child {
   align-content: flex-end;
 }
 .receipt-card {
-  background-color: var(--neutral400);
+  background-color: var(--neutral0);
   background-image: none;
   box-shadow: none;
   transform: rotate(-2deg) translateY(-10px);
+}
+.h-card {
+  z-index: 10;
+}
+.receipt-title {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--neutral600);
+  border-bottom: 1px var(--neutral400) dashed;
+}
+.receipt-title:first-child {
+  text-transform: uppercase;
+}
+
+.receipt-title p {
+  color: var(--neutral900);
+  text-transform: none;
+  font-weight: 400;
+  padding-bottom: 6px;
+}
+.wtf {
+  justify-items: flex-end;
+  flex-basis: 100%;
+  text-align: right;
 }
