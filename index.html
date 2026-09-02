@@ -27,44 +27,65 @@
     <div class="sidebar-wrapper">
       <button id="menu-btn" aria-label="Open Menu">☰</button>
       <!-- Overlay Backdrop -->
-      <div id="overlay" class="overlay"></div>
-
-      <!-- Sliding Sidebar -->
-      <nav id="sidebar" class="sidebar">
-        <div class="sidebar-top">
-          <div class="top-title">
-            <div class="title-text">
-              <p class="maison-title text-preset-4-italic">Maison</p>
-              <p class="soleil-title text-preset-4">Soleil</p>
+      <div id="overlay" class="overlay">
+        <!-- Sliding Sidebar -->
+        <nav id="sidebar" class="sidebar">
+          <div class="menu-body">
+            <div class="sidebar-top">
+              <div class="top-title">
+                <div class="title-text">
+                  <p class="maison-title text-preset-4-italic">Maison</p>
+                  <p class="soleil-title text-preset-4">Soleil</p>
+                </div>
+              </div>
+              <button
+                id="close-btn"
+                class="custom-button"
+                aria-label="Close Menu"
+              >
+                <img src="../img/icon-close.svg" alt="" />
+              </button>
+            </div>
+            <!-- menu start -->
+            <div class="pill-div">
+              <div class="pill menu-stay">
+                <a href="#" class="stay-title">Your stay</a
+                ><span class="stay-badge">1</span>
+              </div>
+              <div class="pill menu-house">
+                <a href="#" class="house-title">The house</a>
+              </div>
+              <div class="pill menu-around">
+                <a href="#" class="town-title">Around town</a>
+              </div>
+              <div class="pill menu-breakfast">
+                <a href="#" class="breakfast-title">Breakfast</a>
+              </div>
+              <div class="pill menu-messages">
+                <a href="#" class="messages-title">Messages</a>
+              </div>
+            </div>
+            <div class="weather-pill">
+              <!-- Local weather -->
+              <div class="weather-text">
+                <span class="text-preset-10">Today in Cassis</span>
+                <span class="text-preset-2">27°</span>
+                <span class="text-preset-7">Sunny · light breeze</span>
+              </div>
+              <div class="sun-image">
+                <img src="../img/icon-weather.svg" alt="" />
+              </div>
+            </div>
+            <div class="menu-footer .text-preset-10">
+              <p>Est. 1987</p>
+              <p>Maison Soleil · 12 Rue des Oliviers ·</p>
+              <p>Cassis</p>
+              <p>© 2026 Maison Soleil</p>
             </div>
           </div>
-          <button id="close-btn" class="custom-button" aria-label="Close Menu">
-            <img src="../img/icon-close.svg" alt="" />
-          </button>
-        </div>
-        <!-- menu start -->
-        <div class="menu-body">
-          <div class="pill menu-stay">
-            <a href="#" class="stay-title">Your stay</a
-            ><span class="stay-badge">1</span>
-          </div>
-          <div class="pill menu-house">
-            <a href="#" class="house-title">The house</a>
-          </div>
-          <div class="pill menu-around">
-            <a href="#" class="town-title">Around town</a>
-          </div>
-          <div class="pill menu-breakfast">
-            <a href="#" class="breakfast-title">Breakfast</a>
-          </div>
-          <div class="pill menu-messages">
-            <a href="#" class="messages-title">Messages</a>
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
-    <!-- Guest navigation -->
-    Your stay 1 The house Around town Breakfast Messages
 
     <!-- Local weather -->
     Today in Cassis 27° Sunny · light breeze Est. 1987 Maison Soleil · 12 Rue

@@ -49,7 +49,7 @@
 .text-preset-2 {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   font-variation-settings:
     "SOFT" 0,
@@ -186,6 +186,9 @@ body {
 .sidebar {
   padding: 16px;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   top: 0;
   left: -310px; /* Hide off-screen */
   width: 310px;
@@ -251,11 +254,11 @@ body {
   outline: 3px solid #80bdff; /* Clear focus ring for accessibility */
 }
 .menu-body {
-  margin: 16px 0;
+  margin: 0;
   display: flex;
+  flex: 1;
   flex-direction: column;
   width: 288px;
-  height: 208px;
   padding-right: 10px;
 }
 .pill {
@@ -353,4 +356,48 @@ body {
   background-size: contain; /* Ensures the icon fits the box scales */
   background-repeat: no-repeat;
   vertical-align: middle;
+}
+.weather-pill {
+  background-color: var(--sun300);
+  height: 102px;
+  border-radius: 16px;
+  display: flex;
+  overflow: hidden;
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+.weather-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 12px 16px;
+}
+.sun-image {
+  transform: translateX(50px) translateY(-25px);
+}
+.weather-text span:nth-child(1) {
+  color: var(--neutral700);
+  text-transform: uppercase;
+}
+.weather-text span:nth-child(2) {
+  color: var(--neutral900);
+}
+.weather-text span:nth-child(3) {
+  color: var(--neutral700);
+}
+.menu-footer {
+  border-top: var(--neutral400) 1px dotted;
+}
+.menu-footer p {
+  margin: 0;
+  padding: 10px 0;
+  color: var(--neutral600);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.menu-footer p:nth-child(2) {
+  padding: 0px;
+}
+.menu-footer p:last-child {
+  padding: 0px;
 }

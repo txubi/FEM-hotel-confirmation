@@ -10,4 +10,6 @@ function toggleMenu() {
 
 menuBtn.addEventListener("click", toggleMenu);
 closeBtn.addEventListener("click", toggleMenu);
-overlay.addEventListener("click", toggleMenu);
+overlay.addEventListener("click", (e) => {
+  if (e.target === overlay) toggleMenu();
+});
