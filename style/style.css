@@ -251,19 +251,25 @@ body {
   outline: 3px solid #80bdff; /* Clear focus ring for accessibility */
 }
 .menu-body {
-  margin-top: 16px;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  width: 288px;
+  height: 208px;
+  padding-right: 10px;
 }
 .pill {
   height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
 }
 .pill a {
   text-decoration: none;
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   font-variation-settings:
     "SOFT" 0,
@@ -275,6 +281,8 @@ body {
 }
 .menu-stay {
   background-color: var(--neutral0);
+  display: flex;
+  justify-content: space-between;
 }
 .stay-badge {
   display: inline-flex;
@@ -285,4 +293,64 @@ body {
   background-color: var(--teracotta600);
   color: var(--neutral100);
   border-radius: 50%;
+}
+.stay-title::before {
+  content: ""; /* Required for the pseudo-element to render */
+  display: inline-block; /* Allows setting width and height */
+  flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; /* Adds space between the icon and text */
+  background-image: url("../img/icon-bed.svg");
+  background-size: contain; /* Ensures the icon fits the box scales */
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Aligns it vertically with adjacent text */
+}
+.house-title::before {
+  content: ""; /* Required for the pseudo-element to render */
+  display: inline-block; /* Allows setting width and height */
+  flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; /* Adds space between the icon and text */
+  background-image: url("../img/icon-house.svg");
+  background-size: contain; /* Ensures the icon fits the box scales */
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Aligns it vertically with adjacent text */
+}
+.town-title::before {
+  content: ""; /* Required for the pseudo-element to render */
+  display: inline-block; /* Allows setting width and height */
+  flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; /* Adds space between the icon and text */
+  background-image: url("../img/icon-pin.svg");
+  background-size: contain; /* Ensures the icon fits the box scales */
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Aligns it vertically with adjacent text */
+}
+.breakfast-title::before {
+  content: ""; /* Required for the pseudo-element to render */
+  display: inline-block; /* Allows setting width and height */
+  flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; /* Adds space between the icon and text */
+  background-image: url("../img/icon-breakfast-outline.svg");
+  background-size: contain; /* Ensures the icon fits the box scales */
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Aligns it vertically with adjacent text */
+}
+.messages-title::before {
+  content: ""; /* Required for the pseudo-element to render */
+  display: inline-block; /* Allows setting width and height */
+  flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; /* Adds space between the icon and text */
+  background-image: url("../img/icon-mail.svg");
+  background-size: contain; /* Ensures the icon fits the box scales */
+  background-repeat: no-repeat;
+  vertical-align: middle;
 }
