@@ -511,7 +511,6 @@ header .custom-button:last-child {
 .receipt-title:first-child {
   text-transform: uppercase;
 }
-
 .receipt-title p {
   color: var(--neutral900);
   text-transform: none;
@@ -522,4 +521,42 @@ header .custom-button:last-child {
   justify-items: flex-end;
   flex-basis: 100%;
   text-align: right;
+}
+.check-section,
+.items-list {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: dotted var(--neutral400) 1px;
+  padding-bottom: 20px;
+}
+.items-list {
+  flex-direction: column;
+  height: 88px;
+  border-bottom: solid var(--neutral600) 1px;
+  color: var((--neutral900));
+}
+.check-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.check {
+  text-transform: uppercase;
+}
+.check,
+.check-date {
+  color: var(--neutral700);
+}
+.check-boom {
+  margin: 8px 0px;
+  color: var(--neutral900);
+}
+.items-list p {
+  display: flex;
+  justify-content: space-between;
+}
+.items-list p span {
+  font-weight: 400;
 }
