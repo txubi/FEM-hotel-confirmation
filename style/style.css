@@ -25,7 +25,7 @@
 .text-preset-1 {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   font-variation-settings:
     "SOFT" 0,
@@ -97,7 +97,7 @@
 .text-preset-5 {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   font-variation-settings:
     "SOFT" 0,
@@ -388,4 +388,43 @@ body {
 }
 .main-wrapper {
   padding: 16px;
+}
+header p {
+  margin: 0;
+}
+header p:nth-child(1) {
+  margin-top: 16px;
+  color: var(--neutral600);
+  text-transform: uppercase;
+}
+header p:nth-child(2) {
+  padding-bottom: 16px;
+}
+.lucia-text {
+  color: var(--teracotta600);
+  font-style: italic;
+}
+.main-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+header .custom-button {
+  background-color: tomato; /* Primary blue color */
+  height: 20px;
+  width: 153.5px;
+  height: 37px;
+  border: var(--neutral400) 1px solid;
+  border-radius: 30px; /* Slightly rounded corners */
+  cursor: pointer; /* Changes cursor to a hand tool */
+}
+header .custom-button:first-child {
+  background-color: var(--neutral100);
+  color: var(--neutral900);
+  border: 1px var(--neutral400) solid;
+}
+header .custom-button:last-child {
+  background-color: var(--neutral900);
+  color: var(--neutral400);
+  border: 1px var(--neutral400) solid;
 }
