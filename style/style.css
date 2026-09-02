@@ -61,7 +61,7 @@
 .text-preset-3 {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   font-variation-settings:
     "SOFT" 0,
@@ -497,6 +497,10 @@ header .custom-button:last-child {
   background-image: none;
   box-shadow: none;
   transform: rotate(-2deg) translateY(-10px);
+  box-shadow:
+    0px 1px 0px rgba(0, 0, 0, 3%),
+    0px 16px 30px -20px rgba(62, 44, 30, 35%),
+    0px 20px 40px -30px rgba(62, 44, 30, 16%);
 }
 .h-card {
   z-index: 10;
@@ -559,4 +563,20 @@ header .custom-button:last-child {
 }
 .items-list p span {
   font-weight: 400;
+}
+.reciept-total {
+  padding: 16px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.reciept-total span:first-child {
+  text-transform: uppercase;
+}
+.reciept-paid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reciept-paid span {
+  text-transform: uppercase;
 }
