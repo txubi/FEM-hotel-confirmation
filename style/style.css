@@ -431,6 +431,12 @@ header .custom-button:last-child {
   color: var(--neutral400);
   border: 1px var(--neutral400) solid;
 }
+.booking-cards {
+  height: 863px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .host-card {
   width: 327px;
   height: 420px;
@@ -442,8 +448,8 @@ header .custom-button:last-child {
   border-radius: 20px;
   box-shadow:
     0px 10px 40px rgba(194, 90, 46, 35%),
-    0px 50px 80px rgba(169, 66, 31, 25%),
-    0px 0px 1 rgba(255, 244, 220) inset;
+    0px 50px 80px rgba(169, 66, 31, 25%) inset;
+  box-shadow: 0px 0px 1 rgba(255, 244, 220) inset;
   transform: rotate(2deg);
 }
 .host-wrapper {
@@ -484,4 +490,10 @@ header .custom-button:last-child {
 .host-footer {
   flex: 1;
   align-content: flex-end;
+}
+.receipt-card {
+  background-color: var(--neutral400);
+  background-image: none;
+  box-shadow: none;
+  transform: rotate(-2deg) translateY(-10px);
 }
