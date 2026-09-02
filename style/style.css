@@ -109,7 +109,8 @@
 .text-preset-6 {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 1.8px;
   font-style: normal;
 }
 .text-preset-7 {
@@ -579,4 +580,124 @@ header .custom-button:last-child {
 }
 .reciept-paid span {
   text-transform: uppercase;
+}
+.guest-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+.guest-card {
+  width: 343px;
+  border-radius: 16px;
+  margin: 9px 0;
+  height: 232px;
+  background-color: var(--neutral50);
+  border: 1px solid var(--neutral400);
+}
+.guest-wrapper {
+  margin: 20px 16px;
+}
+.arrival-row {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.arr-row {
+  color: var(--teracotta600);
+}
+.wifi-row {
+  color: var(--blue500);
+}
+.break-row {
+  color: var(--rose500);
+}
+.arrival-title::before {
+  content: ""; /* Required for the pseudo-element to render */
+  display: inline-block; /* Allows setting width and height */
+  flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  margin-right: 10px; /* Adds space between the icon and text */
+  background-image: url("../img/icon-key.svg");
+  background-size: 24px;
+
+  background-position: center;
+  background-color: var(--teracotta600);
+  /* background-size: contain; Ensures the icon fits the box scales */
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Aligns it vertically with adjacent text */
+}
+.break-title::before {
+  content: ""; /* Required for the pseudo-element to render */
+  display: inline-block; /* Allows setting width and height */
+  flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  margin-right: 10px; /* Adds space between the icon and text */
+  background-image: url("../img/icon-breakfast.svg");
+  background-color: var(--rose500);
+  background-size: 24px;
+  background-position: center; /* Ensures the icon fits the box scales */
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Aligns it vertically with adjacent text */
+}
+.wifi-title::before {
+  content: ""; /* Required for the pseudo-element to render */
+  display: inline-block; /* Allows setting width and height */
+  flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  margin-right: 10px; /* Adds space between the icon and text */
+  background-image: url("../img/icon-wifi.svg");
+  background-size: 24px;
+
+  background-position: center;
+  background-color: var(--blue500);
+  /* background-size: contain; Ensures the icon fits the box scales */
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Aligns it vertically with adjacent text */
+}
+.guest-title {
+  margin: 10px 0px;
+  color: var(--neutral900);
+}
+.guest-subtitle {
+  margin: 10px 0px;
+  color: var(--neutral900);
+}
+.guest-text {
+  color: var(--neutral900);
+  font-weight: 300;
+}
+.network-pill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0px;
+  height: 32px;
+  padding: 0px 10px;
+  background-color: var(--neutral200);
+  border-radius: 8px;
+}
+.net-upper {
+  text-transform: uppercase;
+}
+.copy-btn {
+  /* 2. Visual appearance */
+  background-color: var(--neutral200); /* Primary blue color */
+  display: inline-flex;
+  height: 20px;
+  width: 43px;
+  border: var(--neutral400) 1px solid;
+  border-radius: 20px; /* Slightly rounded corners */
+  cursor: pointer; /* Changes cursor to a hand tool */
+  text-transform: uppercase;
+}
+/* Focus State (Keyboard navigation/Accessibility) */
+.custom-button:focus-visible {
+  outline: 3px solid #80bdff; /* Clear focus ring for accessibility */
 }
