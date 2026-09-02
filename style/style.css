@@ -73,7 +73,7 @@
 .text-preset-4 {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 500;
   font-style: normal;
   font-variation-settings:
     "SOFT" 0,
@@ -156,23 +156,60 @@
   line-height: 140%;
   letter-spacing: 1px;
 }
+body {
+  background-color: var(--neutral100);
+}
+.top-title {
+  display: flex;
+  align-items: center;
+}
+.maison-title {
+  color: var(--teracotta600);
+}
+.top-title::before {
+  content: ""; /* Required for the pseudo-element to render */
+  display: inline-block; /* Allows setting width and height */
+  flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
+  width: 34px;
+  height: 34px;
+  margin-right: 8px; /* Adds space between the icon and text */
+  background-image: url("../img/icon-sun.svg");
+  background-size: contain; /* Ensures the icon fits the box scales */
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Aligns it vertically with adjacent text */
+}
+.maison-title,
+.soleil-title {
+  margin: 0;
+  line-height: 100%;
+}
 .sidebar {
+  padding: 16px;
   position: fixed;
   top: 0;
   left: -310px; /* Hide off-screen */
   width: 310px;
   height: 100%;
-  background-color: #ffffff;
+  background-color: var(--neutral100);
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
 }
-
+.sidebar-top {
+  height: 59px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: var(--neutral400) solid 1px;
+}
 /* Sidebar active/open state */
 .sidebar.open {
   transform: translateX(310px);
 }
-
+#close-btn {
+  width: 32px;
+  height: 32px;
+}
 /* Dark overlay background */
 .overlay {
   position: fixed;
@@ -190,4 +227,26 @@
 .overlay.active {
   visibility: visible;
   opacity: 1;
+}
+
+.custom-button {
+  /* 1. Reset default browser styles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  outline: none;
+
+  /* 2. Visual appearance */
+  background-color: var(--neutral100); /* Primary blue color */
+  height: 20px;
+  width: 20px;
+  border: var(--neutral400) 1px solid;
+  border-radius: 4px; /* Slightly rounded corners */
+  cursor: pointer; /* Changes cursor to a hand tool */
+}
+/* Focus State (Keyboard navigation/Accessibility) */
+.custom-button:focus-visible {
+  outline: 3px solid #80bdff; /* Clear focus ring for accessibility */
 }

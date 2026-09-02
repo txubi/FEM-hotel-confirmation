@@ -24,22 +24,31 @@
   <body>
     <!-- Sidebar starts -->
     <!-- Hamburger / Toggle Button -->
-    <button id="menu-btn" aria-label="Open Menu">☰</button>
+    <div class="sidebar-wrapper">
+      <button id="menu-btn" aria-label="Open Menu">☰</button>
+      <!-- Overlay Backdrop -->
+      <div id="overlay" class="overlay"></div>
 
-    <!-- Overlay Backdrop -->
-    <div id="overlay" class="overlay"></div>
-
-    <!-- Sliding Sidebar -->
-    <nav id="sidebar" class="sidebar">
-      <button id="close-btn" aria-label="Close Menu">&times;</button>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    Maison Soleil
-
+      <!-- Sliding Sidebar -->
+      <nav id="sidebar" class="sidebar">
+        <div class="sidebar-top">
+          <div class="top-title">
+            <div class="title-text">
+              <p class="maison-title text-preset-4-italic">Maison</p>
+              <p class="soleil-title text-preset-4">Soleil</p>
+            </div>
+          </div>
+          <button id="close-btn" class="custom-button" aria-label="Close Menu">
+            <img src="../img/icon-close.svg" alt="" />
+          </button>
+        </div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
     <!-- Guest navigation -->
     Your stay 1 The house Around town Breakfast Messages
 
