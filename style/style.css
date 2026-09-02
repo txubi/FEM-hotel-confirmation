@@ -250,3 +250,39 @@ body {
 .custom-button:focus-visible {
   outline: 3px solid #80bdff; /* Clear focus ring for accessibility */
 }
+.menu-body {
+  margin-top: 16px;
+}
+.pill {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pill a {
+  text-decoration: none;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0px;
+  color: var(--neutral900);
+}
+.menu-stay {
+  background-color: var(--neutral0);
+}
+.stay-badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 16px;
+  width: 16px;
+  background-color: var(--teracotta600);
+  color: var(--neutral100);
+  border-radius: 50%;
+}
