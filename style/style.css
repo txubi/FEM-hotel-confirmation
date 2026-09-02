@@ -37,7 +37,7 @@
 .text-preset-1-italic {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   font-variation-settings:
     "SOFT" 0,
@@ -158,6 +158,9 @@
 }
 body {
   background-color: var(--neutral100);
+}
+p {
+  margin: 0;
 }
 .top-title {
   display: flex;
@@ -445,4 +448,40 @@ header .custom-button:last-child {
 }
 .host-wrapper {
   padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.host-title {
+  height: 65px;
+  border-top: dashed 1px var(--teracotta400);
+  color: var(--sun50);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+.host-title p {
+  margin-top: 15px;
+}
+.host-title img {
+  width: 49px;
+  height: 49px;
+  align-self: flex-end;
+}
+.host-middle p,
+.host-footer {
+  color: var(--sun50);
+}
+.host-middle p:first-child {
+  margin-bottom: 10px;
+  color: var(--sun200);
+}
+.host-text {
+  margin-top: 25px;
+  font-weight: 400;
+}
+.host-footer {
+  flex: 1;
+  align-content: flex-end;
 }
