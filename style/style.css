@@ -163,25 +163,9 @@ body {
   display: flex;
   align-items: center;
 }
-.maison-title {
-  color: var(--teracotta600);
-}
-.top-title::before {
-  content: ""; /* Required for the pseudo-element to render */
-  display: inline-block; /* Allows setting width and height */
-  flex-shrink: 0; /* Keeps the icon from shrinking next to the text */
-  width: 34px;
-  height: 34px;
-  margin-right: 8px; /* Adds space between the icon and text */
-  background-image: url("../img/icon-sun.svg");
-  background-size: contain; /* Ensures the icon fits the box scales */
-  background-repeat: no-repeat;
-  vertical-align: middle; /* Aligns it vertically with adjacent text */
-}
-.maison-title,
-.soleil-title {
-  margin: 0;
-  line-height: 100%;
+.top-title img {
+  width: auto;
+  height: 42px;
 }
 .sidebar {
   padding: 16px;
@@ -209,7 +193,8 @@ body {
 .sidebar.open {
   transform: translateX(310px);
 }
-#close-btn {
+#close-btn,
+#menu-btn {
   width: 32px;
   height: 32px;
 }
@@ -400,4 +385,7 @@ body {
 }
 .menu-footer p:last-child {
   padding: 0px;
+}
+.main-wrapper {
+  padding: 16px;
 }
