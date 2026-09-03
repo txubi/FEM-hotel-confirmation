@@ -437,6 +437,7 @@ header .custom-button:last-child {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .host-card {
   width: 327px;
@@ -594,6 +595,10 @@ header .custom-button:last-child {
   height: 232px;
   background-color: var(--neutral50);
   border: 1px solid var(--neutral400);
+  box-shadow:
+    0 1px 0px 0px rgba(0, 0, 0, 2%),
+    0 1px 1px 0px rgba(62, 44, 30, 4%),
+    0 18px 40px -28px rgba(62, 44, 30, 25%);
 }
 .guest-wrapper {
   margin: 20px 16px;
@@ -700,4 +705,78 @@ header .custom-button:last-child {
 /* Focus State (Keyboard navigation/Accessibility) */
 .custom-button:focus-visible {
   outline: 3px solid #80bdff; /* Clear focus ring for accessibility */
+}
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-buttons {
+    margin: 0;
+  }
+  .main-buttons button {
+    margin-right: 20px;
+  }
+  .booking-cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .h-card {
+    transform: translate(325px) rotate(4deg);
+  }
+  .receipt-card {
+    transform: translate(-325px) rotate(-4deg);
+  }
+  .booking-cards {
+    height: auto;
+  }
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .guest-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .guest-card {
+    width: auto;
+  }
+  .sidebar {
+    left: -384px;
+    width: 384px;
+  }
+  .sidebar.open {
+    transform: translateX(384px);
+  }
+  .menu-body {
+    width: 336px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  body {
+    display: flex;
+  }
+  .sidebar {
+    position: static;
+    width: 260px;
+    box-shadow: none;
+    border-right: 1px solid var(--neutral400);
+  }
+  .overlay {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    background: none;
+  }
+  .menu-body {
+    width: 228px;
+  }
+  .custom-button {
+    display: none;
+  }
+  .page-top {
+    display: none;
+  }
 }
